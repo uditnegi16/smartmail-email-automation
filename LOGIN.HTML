@@ -8,6 +8,7 @@
         header
         {
             margin-left:900px;
+            color: #7b61ff;
         }
         input
         {
@@ -17,11 +18,11 @@
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
         }
-                form
+        form
         {
             width: 400px;
-            height: 200px;
-            background-color: aquamarine;
+            height: 250px;
+            background: linear-gradient(90deg, #7b61ff, #e390ff);
             padding-bottom:50px;
             padding-top: 50px;
             padding-left:50px;
@@ -34,6 +35,13 @@
             font-style: italic;
             font-size: 13px;
         }
+        body
+        {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
@@ -42,10 +50,10 @@
     </header>
     <form method="GET">
         <div>
-            <label for="username"> Username*</label>
+            <label for="username"> Username*</label><br><br>
             <input type="text" id="username" name="U" placeholder="Username or Email" autofocus  required><br><br>
              <span>Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen</span><br><br>
-            <label for="Password"> password*</label>
+            <label for="Password"> password*</label><br><br>
             <input type="text" id="password" name="U" placeholder="password" required><br><br>
             <span>Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.</span><br><br>
         </div><br>    
