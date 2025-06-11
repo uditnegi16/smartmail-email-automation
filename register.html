@@ -8,37 +8,50 @@
         header
         {
             margin-left:900px;
+            color: #7b61ff;
         }
         form
         {
             width: 450px;
             height: 350px;
-            background-color: aquamarine;
-            padding-bottom: 100px;
+            background: linear-gradient(90deg, #7b61ff, #e390ff);
+            padding-bottom:100px;
             padding-top: 10px;
             padding-left: 10px;
-            margin-left:700px;
-            margin-bottom:100px;
+            margin-left:400px;
+            margin-top:10px;
         }
         h4
         {
-            margin-left:700px;
+            margin-left:400px;
             margin-top: 100px;
+            color: #7b61ff;
         }
         input
         {
             border-radius:5px;
+            color:black;
         }
         label{
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
+            color: black;
         }
         span
         {
             font-family: 'Times New Roman', Times, serif;
             font-style: italic;
             font-size: 13px;
+            color:black;
         }
+        body
+        {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+ 
     </STYLE>
 </head>
 <body>
@@ -48,7 +61,7 @@
     <h4>Sign up to SmartMail</h4>
     <form action="GET">
         <div>
-            <label for="username">Username*</label><br>
+            <label for="username">Username*/Email*</label><br>
             <input  type="text" id="username" name="Username" placeholder="enter username" required ><br>
             <span>Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen</span><br><br>
             <label for="password">Password*</label><br>
@@ -74,7 +87,7 @@
             <input type="radio" id="female" name="Username" required>
             <label for="female">FEMALE</label>
         </div><br>
-        <input type="submit">
+        <input style="margin-left: 180px;" type="submit">
     </form>
 </body>
 </html>
