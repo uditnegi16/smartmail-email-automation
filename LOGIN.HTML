@@ -4,36 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        header
+        {
+            margin-left:900px;
+        }
+        input
+        {
+            border-radius:5px;
+        }
+        label{
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+                form
+        {
+            width: 400px;
+            height: 200px;
+            background-color: aquamarine;
+            padding-bottom:50px;
+            padding-top: 50px;
+            padding-left:50px;
+            margin-left:370px;
+            margin-top:150px;
+        }
+        span
+        {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 13px;
+        }
+    </style>
 </head>
 <body>
-    <H1>LOGIN INTO SMARTMAIL</H1>
-    <form method="post">
+    <header>
+        <h5>New User ? <a target="_blank" href="register.HTML" >Sign up →</a></h5>
+    </header>
+    <form method="GET">
         <div>
-            <label for="username"> USERNAME</label>
+            <label for="username"> Username*</label>
             <input type="text" id="username" name="U" placeholder="Username or Email" autofocus  required><br><br>
-            <label for="Password"> PASSWORD</label>
-            <input type="text" id="password" name="U" placeholder="password" required>
+             <span>Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen</span><br><br>
+            <label for="Password"> password*</label>
+            <input type="text" id="password" name="U" placeholder="password" required><br><br>
+            <span>Password should be at least 15 characters OR at least 8 characters including a number and a lowercase letter.</span><br><br>
         </div><br>    
-        <div>
-            <label for="">GENDER</label>
-            <input type="radio" id="male" name="gender" placeholder="" required>
-            <label for="male">MALE</label>
-            <input type="radio" id="female" name="gender" placeholder="" required>
-            <label for="female">FEMALE</label>
-        </div><br>
-        <div>
-            <label for="feedback">FEEDBACK </label>
-            <textarea name="" id="feedback" rows="4" cols="20"> </textarea>
-        </div><br>
-        <DIV>
-            <LABEl id="mailalt">Other apps using</LABEl>
-            <SELEct id="mailalt" NAME="uMAIL APPLICATIONS">
-                <OPtion>GMAIL</OPtion>
-                <OPtion>OUTLOOK</OPtion>
-                <OPtion>HOTMAIL</OPtion>
-            </SELEct>
-        </DIV><br>
-        <input type="submit" name="" id="">
+        <input style="margin-left: 150px;" type="submit" name="" id="">
     </form>
 </body>
 </html>
