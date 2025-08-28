@@ -1,0 +1,46 @@
+/* all below style  tags are common for login and register */
+input
+{
+    border-radius:5px;
+    color:black;
+}
+label
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+}
+h4
+{
+    margin-left:400px;
+    margin-top: 100px;
+    color: #7b61ff;
+}
+span
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: black;
+}
+body
+{
+    background-image: url('../assets/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+li
+{
+    display: flex;
+    color: #7b61ff;
+}
+header div
+{
+    display: inline-block;
+}
+header span
+{
+    margin-left: 700px;
+    color: #7b61ff;
+}
