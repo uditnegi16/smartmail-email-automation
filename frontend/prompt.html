@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartMail - Prompt Builder</title>
+  <style>
+        /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf6ff;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #7b61ff;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    .navbar nav a.active {
+      text-decoration: underline;
+    }
+
+    /* Prompt Container */
+    .prompt-container {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .prompt-container h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .subinfo {
+      text-align: center;
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    /* Layout */
+    .prompt-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    /* Prompt Box */
+    .prompt-box {
+      flex: 1 1 60%;
+    }
+    .prompt-box label {
+      font-size: 16px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .prompt-box select,
+    .prompt-box input,
+    .prompt-box textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 180px;
+    }
+
+    /* Right Panel */
+    .placeholders {
+      flex: 1 1 35%;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px dashed #aaa;
+    }
+    .placeholders h3,
+    .placeholders h4 {
+      margin-bottom: 12px;
+    }
+    .placeholders ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .placeholders li {
+      background-color: #f0f8ff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-family: monospace;
+    }
+    .required {
+      color: red;
+      font-weight: bold;
+    }
+
+    /* Warning Box */
+    .warning-box {
+      margin-top: 15px;
+      padding: 12px;
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      color: #856404;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">SmartMail</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="upload.html">Upload</a>
+      <a href="prompt.html" class="active">Prompt</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Prompt Section -->
+  <main class="prompt-container">
+    <h2>Prompt Builder with Email Type</h2>
+    <p class="subinfo">Choose the type of email, describe its purpose, and SmartMail will generate personalized prompts using your CSV data.</p>
+
+    <div class="prompt-layout">
+
+      <!-- Prompt Builder Inputs -->
+      <div class="prompt-box">
+
+        <!-- Email Type Selector -->
+        <label for="emailType">Email Type:</label>
+        <select id="emailType">
+          <option value="invitation">Invitation (Fast, Template-Based)</option>
+          <option value="business">Business (Segmented + LLM)</option>
+          <option value="marketing">Marketing (Full LLM per Recipient)</option>
+        </select>
+
+        <!-- Description Input -->
+        <label for="emailDescription">Describe this email's purpose:</label>
+        <input type="text" id="emailDescription" placeholder="e.g., Invite startups to our product launch with a friendly tone">
+
+        <!-- Prompt Box -->
+        <label for="emailPrompt">Prompt Template:</label>
+        <textarea id="emailPrompt" rows="10" placeholder="e.g., Hi {Company}, based in {Location}, we'd love to tell you about our {Product}..."></textarea>
+      </div>
+
+      <!-- Right Panel: CSV Preview + Instructions -->
+      <div class="placeholders">
+        <h3>Detected Fields from CSV</h3>
+        <ul>
+          <li><code>{Company}</code></li>
+          <li><code>{Location}</code></li>
+          <li><code>{Product}</code></li>
+          <li><code>{Email}</code> <span class="required">*</span></li>
+        </ul>
+
+        <h4>Instructions</h4>
+        <p>Use any custom <code>{FieldName}</code> to personalize each message. These will be automatically replaced for each contact.</p>
+
+        <div class="warning-box">
+          ⚠️ <strong>Required:</strong> Your prompt must include <code>{Email}</code> — it is the delivery address for each row.
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

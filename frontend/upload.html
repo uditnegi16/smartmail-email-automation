@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>upload csv</title>
+  <style>
+    * 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf6ff;
+      color: #333;
+    }
+        /* Card Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+    .navbar
+    {
+      background-color:  #7b61ff;
+      display: flex;
+      color: aliceblue;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .navbar .logo
+    {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar a
+    {
+      color: aliceblue;
+      text-decoration: none;
+      margin: 20px;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+    .upload-container
+    {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .upload-container h2
+     {
+      font-size: 28px;
+       margin-bottom: 30px;
+     }
+    .upload-box
+    {
+      border: 2px dashed #888;
+      border-radius: 12px;
+      padding: 40px 20px;
+      margin-bottom: 25px;
+      background-color: #fff;
+    }
+    .upload-box p
+    {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .upload-btn
+    {
+      display: inline-block;
+      background-color: #7b61ff;
+      color: white;
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: not-allowed;
+      overflow: hidden;
+      position: relative;
+    }
+    .upload-btn input
+    {
+      position:absolute;
+      left:0 ;
+      top:0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .connect-btn {
+      background-color: #ccc;
+      color: #555;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: not-allowed;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+    <header class="navbar">
+    <h1 class="logo">SmartMail</h1>
+    <NAV>
+      <a href="dashboard.html"  target="_blank">Dashboard</a>
+      <a href="upload.html" target="_blank">Upload</a>
+      <a href="prompt.html" target="_blank">Prompt</a>
+      <a href="schedule.html" target="_blank">Schedule</a>
+      <a href="analytic.html" target="_blank">Analytics</a>
+      <a href="About.html" target="_blank">About</a>
+    </NAV>
+  </header>
+  <!-- upload section -->
+   <main class="upload-container">
+    <h2>Upload email dataset </h2>
+    <div class="upload-box">
+      <p>📂 Drag and drop your CSV file here</p>
+      <p>or</p>
+      <label class="upload-btn">
+        choose file
+        <input type="file" accept=".csv">
+      </label>
+    </div>
+    <button class="connect-btn" disabled>🔗 Connect Google Sheet (Coming Soon)</button>
+   </main>
+   <!-- connect googel sheet(coming soon) -->
+</body>
+</html>

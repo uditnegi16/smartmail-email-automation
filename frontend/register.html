@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <style>
+        a {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        span {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            font-size: 13px;
+            color: black;
+        }
+
+        nav>img {
+            width: 40x;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 6px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #7b61ff;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            background-color: #a698dd;
+            width: 10px;
+            height: 20px;
+            border-radius: 2px;
+        }
+
+        div>img {
+            width: 500px;
+            height: 120vh;
+        }
+
+        form {
+            width: 440px;
+            height: 520px;
+            background: linear-gradient(90deg, #7b61ff, #e390ff);
+            padding-bottom: 100px;
+            padding-top: 10px;
+            padding-left: 10px;
+            margin-left: 35vh;
+            margin-top: 60px;
+            border: 2px white solid;
+            box-shadow: 0px 0px 20px white;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            padding: 10px;
+            background-color: #654eda;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 30%;
+        }
+
+        main {
+            display: flex;
+        }
+
+        body {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <nav> <img src="assets/IMG1.png" alt="">
+        <div>
+            <ul>
+                <li><a href="About.html">About us</a></li>
+                <li><a href="INTRO.html">Home</a></li>
+                <li><a href=""></a></li>
+                <li><a href="LOGIN.HTML" target="_blank">login</a></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div> <img src="assets/1.jpg" alt=""> </div>
+        <div>
+            <form action="http://localhost:5000/auth/register" method="POST">
+                <h4>Sign up to SmartMail</h4>
+                <div> 
+                    <label for="email" name="email">Username*/Email*</label><br> 
+                    <input type="text" id="email" name="email" placeholder="Enter username" required><br>
+
+                    <span>Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen</span><br><br>
+
+                    <label for="password">Password*</label><br> 
+                    <input type="password" id="password" name="password" placeholder="Strong password" required><br> 
+                    <span>Password should be at least 15 characters OR
+                        at least 8 characters including a number and a lowercase letter.</span><br><br>
+
+                    <label for="age">Age*</label><br>
+                    <input type="number" id="age" name="age" placeholder="Your age" required><br><br> 
+                </div><br>
+                <div> 
+                    <label for="country">Your Country/Region</label><br> 
+                    <select name="country" id="country" required>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="FRANCE">FRANCE</option>
+                    </select><br>
+                    <span>For compliance reasons, we're required to collect country information to send
+                        you occasional updates and announcements.</span> 
+                </div><br>
+                <div> 
+                    <label for="gender">Gender</label> 
+                    <input type="radio" name="gender" value="male" required>
+                    <label for="male">MALE</label> 
+                    <input type="radio" name="gender" value="female" required> 
+                    <label for="female">FEMALE</label>
+                </div><br><br>
+                <input style="margin-left: 150px;" type="submit" value="Register">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

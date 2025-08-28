@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf6ff;
+      color: #333;
+    }
+        /* Card Grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+    .navbar
+    {
+      background-color:  #7b61ff;
+      display: flex;
+      color: aliceblue;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .navbar .logo
+    {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar a
+    {
+      color: aliceblue;
+      text-decoration: none;
+      margin: 20px;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+     /* Dashboard Main */
+    .dashboard {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .dashboard h2 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+     .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: #333;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">SmartMail</h1>
+    <NAV>
+      <a href="dashboard.html"  target="_blank">Dashboard</a>
+      <a href="upload.html" target="_blank">Upload</a>
+      <a href="prompt.html" target="_blank">Prompt</a>
+      <a href="schedule.html" target="_blank">Schedule</a>
+      <a href="analytic.html" target="_blank">Analytics</a>
+      <a href="About.html" target="_blank">About</a>
+    </NAV>
+  </header>
+  <!-- card container -->
+  <main class="dashboard">
+    <h1>Welcome to your dashboard</h1>
+    <div class="card-grid">
+      <a href="upload.html"  class="card" target="_blank">
+        <div class="card-icon">📁</div>
+        <h3>Upload Data</h3>
+        <p>Upload CSV or connect Google Sheet</p>
+      </a>
+      <a href="" class="card" target="_blank">
+        <div class="card-icon">✏️</div>
+        <h3>Build Prompt</h3>
+        <p>Create dynamic email content</p>
+      </a>
+      <a href="" class="card" target="_blank">
+        <div class="card-icon">📆</div>
+        <h3>Schedule Emails</h3>
+        <p>Set send time and throttling</p>
+
+      </a>
+      <a href="" class="card" target="_blank">
+        <div class="card-icon">📊</div> 
+        <h3>Email Analaytics</h3>
+        <p>Track sent, opened, failed emails</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

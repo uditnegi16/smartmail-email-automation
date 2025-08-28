@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartMail - Email Scheduler</title>
+  <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eaf6ff;
+    color: #333;
+  }
+
+  .navbar {
+    background-color: #7b61ff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+  }
+  .navbar a:hover {
+      text-decoration: underline;
+   }
+  .schedule-container {
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: auto;
+  }
+  .schedule-container h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .subinfo {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .schedule-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .schedule-form input,
+  .schedule-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .summary-box {
+    background-color: #f8f9fa;
+    border-left: 5px solid #0066cc;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    border-radius: 6px;
+    color: #444;
+  }
+
+  .schedule-btn {
+    display: block;
+    width: 100%;
+    background-color: #7b61ff;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .schedule-btn:hover {
+    background-color: #004c99;
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">SmartMail</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="upload.html">Upload</a>
+      <a href="prompt.html">Prompt</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="schedule-container">
+    <h2>Schedule Your Email Campaign</h2>
+    <p class="subinfo">Set the time and sending speed for your email batch.</p>
+
+    <form class="schedule-form">
+
+      <!-- Date and Time -->
+      <label for="startDateTime">Start Sending At:</label>
+      <input type="datetime-local" id="startDateTime" name="startDateTime" required>
+
+      <!-- Sending Rate -->
+      <label for="rate">Send Rate:</label>
+      <select id="rate" name="rate">
+        <option value="10">10 emails per hour</option>
+        <option value="25">25 emails per hour</option>
+        <option value="50" selected>50 emails per hour</option>
+        <option value="100">100 emails per hour</option>
+      </select>
+
+      <!-- Optional Batch Size -->
+      <label for="batch">Emails per Batch (Optional):</label>
+      <select id="batch" name="batch">
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+
+      <!-- Summary Box -->
+      <div class="summary-box">
+        📤 You are scheduling <strong>500 emails</strong><br>
+        Starting from: <span id="startSummary">Not selected</span><br>
+        Rate: <span id="rateSummary">50 emails/hour</span>
+      </div>
+
+      <!-- Button -->
+      <button type="submit" class="schedule-btn">Save Schedule</button>
+
+    </form>
+  </main>
+
+</body>
+</html>
