@@ -1,5 +1,5 @@
 # smartmail-email-automation(under development)
-#  Custom Email Sender with LLM Personalization – BreakoutAI Assessment
+#  Custom Email Sender with LLM Personalization
 
 ## Project Overview
 This project is a scalable, intelligent email automation tool designed for outreach campaigns. It allows users to upload email data, generate personalized messages using LLMs, and track delivery and performance in real time.
